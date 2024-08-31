@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import DateFormat from '../components/dateFormat.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -10,40 +11,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="max-w-prose mx-auto font-mono bg-[#1d2021] text-[#ffffff]">
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+		<main >
+			<div class="pt-10 flex flex-col gap-5">
+				<h1 class="text-3xl font-bold">Hi, I'm Quantinium </h1>
+				<p>I'm a second year uni student just trying to learn cool and stuff and make stuff that seem cool to me.</p>
+				<p>I made this website to keep track of everything i do and make it easy for me to access everything in least possible time</p>
+				<p>It's my personal space to share what i'm learning, stay motivated and get better at organizing my thoughts.</p>
+				<p>You'll find my daily progress, current projects, blogs, resources and notes here. Its a work in progress.</p>
+				<p>Feel free to <a class="font-bold text-[#fe8019] hover:underline" href="">DM me @𝕏</a>
+			</div>
+			<div class="mt-10">
+				<h1 class="text-3xl font-bold text-[#b8bb26] mb-5">Posts:</h1>
+				<p>Haven't Posted anything yet. <DateFormat date="August 31, 2024"/></p>
+			</div>
+			<div class="mt-10">
+				<h1 class="text-3xl font-bold text-[#b8bb26]"> Daily Report: </h1>
+				<p class="py-3">still in progress ...</p>
+				<ul class="list-disc pl-5">
+					<li>
+						<p><a class="text-[#fe8019] hover:underline text-lg"href="">Day 1</a><DateFormat date="August 31, 2024" /><p>
+					</li>
+					<li>
+						<p><a class="text-[#fe8019] text-lg hover:underline"href="">Day 2</a><DateFormat date="August 31, 2024" /><p>
+					</li>
+					<li>
+						<p><a class="text-[#fe8019] text-lg hover:underline"href="">Day 3</a><DateFormat date="August 31, 2024" /><p>
+					</li>
+				<ul>
+				<p class="pt-5 text-[#fe8019] hover:underline">See all daily reports</p>
+			</div>
 		</main>
 		<Footer />
 	</body>

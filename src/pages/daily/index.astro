@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import DateFormat from '../../components/dateFormat.astro';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('daily')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
@@ -19,14 +19,14 @@ const posts = (await getCollection('blog')).sort(
 	<body class="max-w-[900px] mx-auto font-mono bg-[#1d2021] text-[#ffffff]">
 		<Header />
 		<main class="font-bold mt-10 text-[#b8bb26]">
-			<h1 class="text-3xl">Blogs</h1>
+			<h1 class="text-3xl">Daily Report</h1>
 			<section class="mt-5">
 				<ul class="flex gap-2 flex-col">
 					{
 						posts.map((post) => (
 							<li>
 								<p>
-									<a href={`/blog/${post.slug}/`}>
+									<a href={`/daily/${post.slug}/`}>
 										<span class=" text-[#fe8019]">{post.data.title}</span>
 									</a>
 								</p>
@@ -40,3 +40,4 @@ const posts = (await getCollection('blog')).sort(
 		<Footer />
 	</body>
 </html>
+

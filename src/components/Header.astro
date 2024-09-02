@@ -1,13 +1,15 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+const { pathname }  = Astro.url;
 ---
 
-<header class="flex justify-center mt-10 border-b border-white pb-3">
-	<nav class="flex justify-around w-full text-xl">
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/notes">Notes</HeaderLink>
-		<HeaderLink href="/resources">Resource</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
+<header class="flex justify-around mt-5 border-b border-white pb-3">
+	<nav class="flex justify-around flex-row w-full gap-7 flex-wrap text-xl mx-3">
+		<HeaderLink href="/" class=`${pathname === '/' ? 'text-[#d79921]': ''}`>Home</HeaderLink>
+		<HeaderLink href="/blog" class=`${pathname.startsWith('/blog') ? 'text-[#d79921]' : ''}`>Blog</HeaderLink>
+		<HeaderLink href="/daily" class=`${pathname.startsWith('/daily') ? 'text-[#d79921]' : ''}`>Daily Report</HeaderLink>
+		<HeaderLink href="/notes" class=`${pathname.startsWith('/notes') ? 'text-[#d79921]' : ''}`>Notes</HeaderLink>
+		<HeaderLink href="/resources" class=`${pathname.startsWith('/resouces') ? 'text-[#d79921]' : ''}`>Resource</HeaderLink>
+		<HeaderLink href="/about" class=`${pathname.startsWith('/about') ? 'text-[#d79921]' : ''}`>About</HeaderLink>
 	</nav>
 </header>

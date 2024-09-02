@@ -15,7 +15,7 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<DailyPost{...post.data}>
+<DailyPost {...post.data}>
 	<Content />
 </DailyPost>
 

@@ -1,5 +1,5 @@
 ---
-title: 'Day 1'
+title: 'Day 2'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 08 2022'
 ---

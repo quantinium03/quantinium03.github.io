@@ -4,7 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-type Props = CollectionEntry<'daily'>['data'];
+type Props = CollectionEntry<'resource'>['data'];
 
 const { title, description } = Astro.props;
 ---
@@ -23,7 +23,7 @@ const { title, description } = Astro.props;
 						<span class="flex items-center justify-center px-3">
 							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right flex justify-center content-center "><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
 						</span>
-						<span><a href="/daily" class="text-[#665c54]">Daily</a></span>
+						<span><a href="/resource" class="text-[#665c54]">Resource</a></span>
 						<span class="flex items-center justify-center px-3">
 							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right flex justify-center content-center "><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
 						</span>

@@ -11,11 +11,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class="max-w-[900px] mx-auto font-mono bg-[#1d2021] text-[#ffffff]">
-		<Header />
-		<main class="font-bold mt-10 text-[#b8bb26]">
-			<h1 class="text-4xl">Notes</h1>
-		</main>
-		<Footer />
+		<div class="mx-5">
+			<Header />
+			<main>
+				<h1 class="font-bold text-4xl mt-10 text-[#b8bb26]">Notes</h1>
+				<p class="mt-5">Can't seem to figure out a way to make them easily viewable with a file tree by side with this width.If you got any suggestion send them my way. For now <a href="https://github.com/QuantiniumX/obsidian" target="_blank" class="hover:underline text-[#fe8019]">go to github</a>
+			</main>
+			
+			<Footer />
+		</div>
 	</body>
 </html>
 

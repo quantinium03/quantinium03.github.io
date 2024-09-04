@@ -4,9 +4,8 @@ const { pathname }  = Astro.url;
 ---
 
 <header class="flex justify-around mt-5 border-b border-white pb-3">
-	<img src="/dandadan.jpeg" class="rounded-full w-10 mr-5 hidden lg:block">
+	<img src="/dandadan.avif" class="rounded-full w-10 mr-5 hidden lg:block">
 	<nav class="flex flex-row w-full gap-5 flex-wrap text-xl items-center">
-		
 		<HeaderLink href="/" class=`${pathname === '/' ? 'text-[#d79921]': ''}`>Home</HeaderLink>
 		<HeaderLink href="/blog" class=`${pathname.startsWith('/blog') ? 'text-[#d79921]' : ''}`>Blog</HeaderLink>
 		<HeaderLink href="/daily" class=`${pathname.startsWith('/daily') ? 'text-[#d79921]' : ''}`>Daily Report</HeaderLink>

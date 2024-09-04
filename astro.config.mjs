@@ -7,6 +7,6 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://quantiniumx.github.io/',
+	site: 'https://quantinium03.github.io/',
 	integrations: [mdx(), sitemap(), tailwind()],
 });

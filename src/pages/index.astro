@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import DateFormat from '../components/dateFormat.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
+import Link from '../components/Link.astro';
 
 const blogs = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -35,6 +36,7 @@ const showMoreReports = daily.length > maxItemsToShow;
 					<p>You'll find my daily progress, current projects, blogs, resources and notes here. Its a work in progress.</p>
 					<p>Feel free to <a class="font-bold text-[#fe8019] hover:underline" href="https://x.com/quantinium03" target="_blank">message me.</a>
 				</div>
+				<p class="pt-5"> You can use some vim binding btw to go through this page. Find at <Link url="/shortcuts" name="shortcuts" /> or press <span class="text-gruvred font-bold">Shift + s</span> </p>
 				<div class="mt-10">
 					<h1 class="text-3xl font-bold text-[#b8bb26] mb-3">Posts</h1>
 				</div>

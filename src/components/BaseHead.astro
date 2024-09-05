@@ -41,3 +41,70 @@ const { title, description} = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(Astro.url)} />
+
+<script>
+  let gKeyPressed = false;
+  let keySequence: string[] = [];
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('keydown', function(event) {
+	  event.preventDefault();
+      const key = event.key.toLowerCase();
+      const scrollAmount = 50;
+	  const controlScrollAmount = 250;
+
+      // Keybindings for scrolling
+      if (key === 'j') {
+        // Scroll down
+        window.scrollBy(0, scrollAmount);
+      } else if (key === 'k') {
+        window.scrollBy(0, -scrollAmount);
+      } else if (event.shiftKey && key === 'g') {
+        window.scrollTo(0, document.body.scrollHeight);
+      } else if (key === 'g') {
+        if (gKeyPressed) {
+          window.scrollTo(0, 0);
+          gKeyPressed = false;
+        } else {
+          gKeyPressed = true;
+          setTimeout(() => gKeyPressed = false, 500);
+        }
+	  } else if(event.shiftKey && key === 'b') {
+		window.location.href = '/blog';
+	  } else if(event.shiftKey && key === 'd') {
+		  window.location.href = '/daily';
+	  } else if (event.shiftKey && key === 'n' ) {
+		  window.location.href = '/notes';
+	  } else if (event.shiftKey && key === 'r') {
+		  window.location.href = '/resource'
+	  } else if(event.shiftKey && key === 'a') {
+		  window.location.href = '/about';
+	  } else if (event.shiftKey && key === 'h') {
+		  window.location.href = '/'
+	  } else if(event.shiftKey && key === 'x'){
+		  window.location.href = 'https://x.com/quantinium03'
+	  } else if (event.ctrlKey && key === 'd') {
+        event.preventDefault();
+        window.scrollBy(0, controlScrollAmount);
+		return;
+	  } else if (event.ctrlKey && key === 'u') {
+        event.preventDefault();
+		window.scrollBy(0, -controlScrollAmount);
+		return;
+	  } else if(event.shiftKey && key === 's') {
+		  window.location.href = '/shortcuts'
+	  }
+
+	  keySequence.push(key);
+      if (keySequence.join('') === 'git') {
+        window.location.href = 'https://github.com/quantinium03';
+	  } else if(keySequence.join('') === 'ai') {
+		  window.location.href = '/ai'
+	  }
+
+      setTimeout(() => {
+        keySequence = [];
+      }, 1000);
+    });
+  }
+</script>

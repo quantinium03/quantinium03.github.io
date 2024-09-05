@@ -1,0 +1,38 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Link from '../../components/Link.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="max-w-[900px] mx-auto font-mono bg-[#1d2021] text-[#ffffff] text-sm sm:text-base">
+    <div class="mx-5">
+      <Header />
+      <main>
+        <h1 class="text-3xl font-bold mt-10 text-[#b8bb26]">Shortcuts</h1>
+        <ul class="list-disc pl-5 mt-5">
+			<li><span class="text-lg text-gruvred font-bold">Shift + s</span> - shortcuts</li>
+			<li><span class="text-lg text-gruvred font-bold">j</span> - down</li>
+			<li><span class="text-lg text-gruvred font-bold">k</span> - up</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + g</span> - end</li>
+			<li><span class="text-lg text-gruvred font-bold">gg</span> - top</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + h</span> - homepage</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + b</span> - blogs</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + d</span> - Daily Report</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + n</span> - Notes</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + r</span> - Resource</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + a</span> - About</li>
+			<li><span class="text-lg text-gruvred font-bold">Shift + x</span> - X / Twitter</li>
+			<li><span class="text-lg text-gruvred font-bold">git</span> - Github</li>
+        </ul>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

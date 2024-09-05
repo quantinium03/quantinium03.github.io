@@ -19,6 +19,8 @@ export default {
 		},
 		colors: {
 			'gruvora': '#fe8019',
+			'gruvgre': '#b8bb26',
+			'gruvred': '#d79921',
 		},
 	},
 	plugins: [require('@tailwindcss/typography')],

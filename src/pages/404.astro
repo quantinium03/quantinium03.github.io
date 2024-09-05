@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="max-w-[900px] mx-auto font-mono bg-[#1d2021] text-[#ffffff]">
+		<div class="mx-5">
+			<Header />
+				<main class="mt-5">
+					<p class="text-xl font-bold flex justify-center ">This page may not exist yet.</p>
+					<div class="mt-5 flex justify-center">
+						<img src="https://http.cat/404" alt="404 cat" class="flex self-center"/>
+					</div>
+				</main>
+			<Footer />
+		</div>
+	</body>
+</html>
+
+
+
+

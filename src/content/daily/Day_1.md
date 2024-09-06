@@ -13,4 +13,4 @@ pubDate: September 6, 2024
 Couldn't do much today as i was travelling most of the day and also had fever.
 
 ### Notes
-You can check the notes <a href="https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp/dp/0495391328" class="text-[#fe8019] no-underline hover:underline font-bold" target="_blank">Here</a>
+You can check the notes <a href="https://github.com/quantinium03/obsidian/tree/main/Maths/Discrete_Maths" class="text-[#fe8019] no-underline hover:underline font-bold" target="_blank">Here</a>

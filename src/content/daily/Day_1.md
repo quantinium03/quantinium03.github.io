@@ -1,5 +1,5 @@
 ---
-title: Day 1 - September 6, 2024
+title: Day 1
 description: Day 1 progress report
 pubDate: September 6, 2024
 ---

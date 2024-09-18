@@ -9,7 +9,7 @@ pubDate: September 8, 2024
     <li>Learned about Number theory, direct proofs, indirect arguments, two class theorems.</li>
     <li>Worked on my semester project.</li>
     <li>Wrote some <a href="https://go.dev/" class="font-bold text-gruvora no-underline hover:underline" target="_blank">go</a> and it felt really good.</li>
-    <li>Started to learned <a href="https://www.haskell.org/" class="text-gruvora font-bold no-underline hover:underline" target="_blank">Haskell</a>.</li>
+    <li>Started to learn <a href="https://www.haskell.org/" class="text-gruvora font-bold no-underline hover:underline" target="_blank">Haskell</a>.</li>
     <li>Can't do <span class="text-gruvred font-bold">monkeytype</span> today as its 3am. Gotta sleep.</li>
 </ul>
 

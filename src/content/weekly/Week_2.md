@@ -1,7 +1,7 @@
 ---
-title: Day 4-14
-description: Day 4 to 14 progress report
-pubDate: September 18, 2024
+title: Week 2
+description: Week 2 progress report
+pubDate: September 13, 2024
 ---
 
 Didn't write anything as i didn't do much progress on 4th day and then college started again and i got much less time to do stuff and i got ill too. Well these are excuses ig so we start again. Why do i feel anxious while writing these. No-one reads these anyway except me. 
@@ -19,4 +19,3 @@ Just gonna summarize what i did in these days
 - Stepped in the expressjs land. I need to actually learn stuff that gives job.
 - Didn't practice much monkeytype these but gonna get on that from today.
 
-Yeah i think thats all i did.

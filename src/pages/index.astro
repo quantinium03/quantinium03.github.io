@@ -11,13 +11,13 @@ const blogs = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
 
-const daily = (await getCollection('daily')).sort(
+const weekly = (await getCollection('weekly')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
 
 const maxItemsToShow = 3;
 const showMorePosts = blogs.length > maxItemsToShow;
-const showMoreReports = daily.length > maxItemsToShow;
+const showMoreReports = weekly.length > maxItemsToShow;
 ---
 
 <!doctype html>
@@ -33,7 +33,7 @@ const showMoreReports = daily.length > maxItemsToShow;
 					<h1 class="text-3xl font-bold">Hi</h1>
 					<p>I'm a second year uni student just trying to learn and make cool stuff.</p>
 					<p>This is my personal space to share what I'm learning, stay motivated, get better at organizing my thoughts and get everything i want in O(1) complexity.</p>
-					<p>You'll find my daily progress, current projects, blogs, resources and notes here. Its a work in progress.</p>
+					<p>You'll find my weekly progress, current projects, blogs, resources and notes here. Its a work in progress.</p>
 					<p>Feel free to <a class="font-bold text-[#fe8019] hover:underline" href="https://x.com/quantinium03" target="_blank">message me.</a>
 				</div>
 				<p class="pt-5"> You can use some vim binding btw to go through this page. Find at <Link url="/shortcuts" name="shortcuts" /> or press <span class="text-gruvred font-bold">Shift + s</span> </p>
@@ -73,17 +73,17 @@ const showMoreReports = daily.length > maxItemsToShow;
 					<h1 class="text-3xl font-bold text-[#b8bb26] mb-3">Progress Report</h1>
 				</div>
 				<section class="mx-auto">
-					{daily.length === 0 ? (
+					{weekly.length === 0 ? (
 						<p>Work in progress </p>
 					) : (
 						<>
 							<ul class="flex gap-2 flex-col">
 								{
 									
-									daily.slice(0, maxItemsToShow).map((post) => (
+									weekly.slice(0, maxItemsToShow).map((post) => (
 										<li class="flex flex-row gap-2">
 											<p>
-												<a href={`/daily/${post.slug}/`} class="hover:underline text-[#fe8019]">
+												<a href={`/weekly/${post.slug}/`} class="hover:underline text-[#fe8019]">
 													<span class="text-[#fe8019]">{post.data.title}</span>
 												</a>
 											</p>
@@ -95,7 +95,7 @@ const showMoreReports = daily.length > maxItemsToShow;
 							{
 								showMoreReports && (
 								<div class="mt-2">
-									<a class="font-bold text-[#fe8019] hover:underline" href="/daily">Show more... </a>
+									<a class="font-bold text-[#fe8019] hover:underline" href="/weekly">Show more... </a>
 								</div>
 							)}
 						</>

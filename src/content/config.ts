@@ -9,7 +9,7 @@ const blog = defineCollection({
 	}),
 });
 
-const daily = defineCollection({
+const weekly = defineCollection({
 	type: 'content',
 	schema: z.object({
 		title: z.string(),
@@ -26,4 +26,4 @@ const resource = defineCollection({
 	})
 })
 
-export const collections = { blog, daily, resource};
+export const collections = { blog, weekly, resource};

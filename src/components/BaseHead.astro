@@ -42,6 +42,11 @@ const { title, description} = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(Astro.url)} />
 
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
 <script>
   let gKeyPressed = false;
   let keySequence: string[] = [];
@@ -69,8 +74,8 @@ const { title, description} = Astro.props;
         }
 	  } else if(event.shiftKey && key === 'b') {
 		window.location.href = '/blog';
-	  } else if(event.shiftKey && key === 'd') {
-		  window.location.href = '/daily';
+	  } else if(event.shiftKey && key === 'w') {
+		  window.location.href = '/weekly';
 	  } else if (event.shiftKey && key === 'n' ) {
 		  window.location.href = '/notes';
 	  } else if (event.shiftKey && key === 'r') {
